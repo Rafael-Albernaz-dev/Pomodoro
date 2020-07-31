@@ -1,21 +1,24 @@
 // Principal variables
-let seconds = "00"
-let minutes = 25
+
+let minutes = 0
 
 // Audio files
 const click = new Audio("../audio/click.mp3");
 const alarm = new Audio("../audio/bell.mp3");
+const break_sound = new Audio("../audio/japanese.mp3")
 
 function template() {
   document.querySelector(".minutes").innerHTML = minutes;
-  document.querySelector(".seconds").innerHTML = seconds;
+  // document.querySelector(".seconds").innerHTML = seconds;
 }
+
+seconds = 0;
 
 function playTimer() {
   click.play();
-
-  seconds = 59
-  minutes = 24
+ 
+  seconds = seconds - 1;
+  minutes = minutes - 1;
 
   document.querySelector(".minutes").innerHTML = minutes;
   document.querySelector(".seconds").innerHTML = seconds;
@@ -49,13 +52,17 @@ function playTimer() {
     
   }
 
-  document.querySelector(".")
+  document.querySelector("#pause").onclick = function () {
+    clearInterval(minutes_interval);
+    clearInterval(seconds_interval);
+    minutes = minutes + 1;
+  }
 
 }
 
 function breakTimer(x) {
   if(x == true) {
-  click.play();
+  break_sound.play();
   minutes = 4
   seconds = 59
 

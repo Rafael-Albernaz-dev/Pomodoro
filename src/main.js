@@ -1,6 +1,6 @@
 // Principal variables
 
-let minutes = 0
+let minutes = 25
 
 // Audio files
 const click = new Audio("../audio/click.mp3");
@@ -12,7 +12,7 @@ function template() {
   // document.querySelector(".seconds").innerHTML = seconds;
 }
 
-seconds = 0;
+seconds = 60;
 
 function playTimer() {
   click.play();
@@ -87,9 +87,9 @@ function breakTimer(x) {
         clearInterval(minutes_interval);
         clearInterval(seconds_interval);
 
-        document.querySelector(".done").innerHTML = "Clique em play para continuar."
       }
-      
+     
+      seconds = 60;
     }
   }
 

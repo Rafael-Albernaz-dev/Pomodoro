@@ -1,0 +1,20 @@
+body {
+  background-color: #44475a;
+  color: #f8f8f2;
+  font-family: 'Staatliches', cursive;
+}
+
+.title {
+  letter-spacing: 1px;
+  /* border-bottom: 1px solid #f8f8f2; */
+  padding-bottom: 15px;
+
+}
+
+.timer {
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  border: 1px solid #f8f8f2;
+  
+}

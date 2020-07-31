@@ -67,3 +67,22 @@ h4 {
   border-radius: 0.5rem;
   transition: 0.5s ease;
 }
+
+.modal-header {
+  background: #44475a;
+  color: #f8f8f2;
+}
+
+.list-group-item {
+  background: #44475a;
+  color: #f8f8f2;  
+}
+
+.list-group-item:hover {
+  background-color: #44475a!important;
+  color: #f8f8f2!important; 
+}
+
+audio:focus {
+  outline: none;
+}
